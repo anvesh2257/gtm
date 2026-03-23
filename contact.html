@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWBLJDM97Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WWBLJDM97Z');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W9FFCVPK');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Form Tracking Testing</title>
+    <script src="js/tracker.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9FFCVPK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo">GTM Tester</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About & Features</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h1>Contact Us</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Fill out this form to trigger form_start,
+                form_submit, and form_error dataLayer events. Try submitting empty fields to test error tagging.</p>
+
+            <form id="lead-form" novalidate
+                style="background: var(--surface); padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                    <div class="invalid-feedback">Name is required to submit this form.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Work Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                        placeholder="john@example.com">
+                    <div class="invalid-feedback">A valid email address is required.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Request *</label>
+                    <textarea id="message" name="message" class="form-control" required rows="4"
+                        placeholder="How can we help you today?"></textarea>
+                    <div class="invalid-feedback">Please include a reasonably detailed message.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GTM Testing Site. Created for Omnibug verification.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" data-social="twitter">𝕏</a>
+                <a href="https://linkedin.com" target="_blank" data-social="linkedin">in</a>
+                <a href="https://github.com" target="_blank" data-social="github">GH</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

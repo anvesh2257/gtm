@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWBLJDM97Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WWBLJDM97Z');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W9FFCVPK');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GTM Testing</title>
+    <script src="js/tracker.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9FFCVPK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo">GTM Tester</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About & Features</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+        <h1>About the GTM Testing Suite</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Test your complex DOM interactions efficiently.</p>
+
+        <!-- Tabs Section -->
+        <section class="tabs">
+            <h2>Feature Breakdown</h2>
+            <div class="tab-list">
+                <button class="tab-btn active" data-target="tab-analytics">Analytics Validation</button>
+                <button class="tab-btn" data-target="tab-marketing">Marketing Pixels</button>
+                <button class="tab-btn" data-target="tab-custom">Custom Events</button>
+            </div>
+
+            <div class="tab-pane active" id="tab-analytics">
+                <h3>Google Analytics 4</h3>
+                <p>Ensure that parameters such as `page_location`, `page_title`, and specific custom dimensions map
+                    perfectly from your dataLayer variables in GTM directly into your GA4 tags without dropping payload
+                    data.</p>
+            </div>
+            <div class="tab-pane" id="tab-marketing">
+                <h3>Facebook & LinkedIn Pixels</h3>
+                <p>Trigger base pageviews along with micro-conversions. Check your specific parameters like
+                    `content_ids` or `value` to verify pixel health.</p>
+            </div>
+            <div class="tab-pane" id="tab-custom">
+                <h3>Testing Custom Schemas</h3>
+                <p>Pushing objects nested inside arrays? Verify the structure directly matches what the implementation
+                    guide requires.</p>
+            </div>
+        </section>
+
+        <!-- Accordion Section -->
+        <section class="faq" style="margin-top: 4rem;">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        How does the dataLayer tracking work here?
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div style="padding-bottom: 1rem; color: var(--secondary-color);">
+                            Custom JS binds event listeners to DOM elements (tabs, accordions). Upon triggering, it maps
+                            to a standard `trackEvent` function which pushes directly to the `window.dataLayer`.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        What is Omnibug?
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div style="padding-bottom: 1rem; color: var(--secondary-color);">
+                            Omnibug is a browser extension that decodes and displays outgoing analytics requests (like
+                            GA4 and GTM) in your Developer Tools panel. It makes debugging events significantly easier.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Where is the GTM Container ID?
+                        <span>+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div style="padding-bottom: 1rem; color: var(--secondary-color);">
+                            Open `js/tracker.js` and edit the `GTM_ID` constant to replace `GTM-XXXXXXX` with your
+                            actual tracking container ID.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GTM Testing Site. Created for Omnibug verification.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" data-social="twitter">𝕏</a>
+                <a href="https://linkedin.com" target="_blank" data-social="linkedin">in</a>
+                <a href="https://github.com" target="_blank" data-social="github">GH</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
