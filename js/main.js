@@ -126,6 +126,69 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // --- New Feature: Pricing Selection Tracking ---
+    const pricingBtns = document.querySelectorAll(".track-pricing");
+    pricingBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            trackEvent("select_item", {
+                item_list_name: "pricing_tiers",
+                items: [{
+                    item_id: "tier_" + btn.getAttribute("data-plan"),
+                    item_name: btn.getAttribute("data-plan").toUpperCase() + " Plan",
+                    price: parseFloat(btn.getAttribute("data-price")),
+                    currency: "USD"
+                }]
+            });
+            // Visual feedback
+            const originalText = btn.innerText;
+            btn.innerText = "Selected!";
+            setTimeout(() => { btn.innerText = originalText; }, 2000);
+        });
+    });
+
+    // --- New Feature: Timeline Interaction Tracking ---
+    const timelineItems = document.querySelectorAll(".track-timeline");
+    timelineItems.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            // Track hover once per session on timeline item
+            if (!item.hasAttribute("data-hovered")) {
+                trackEvent("timeline_hover", {
+                    step_number: item.getAttribute("data-step"),
+                    step_title: item.querySelector("h3").innerText,
+                });
+                item.setAttribute("data-hovered", "true");
+            }
+        });
+    });
+
+    // --- New Feature: Newsletter Tracking ---
+    const newsletterForm = document.getElementById("newsletter-form");
+    if (newsletterForm) {
+        newsletterForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (emailInput.value.trim()) {
+                trackEvent("generate_lead", {
+                    form_id: "newsletter_form",
+                    lead_type: "subscriber",
+                    currency: "USD",
+                    value: 0
+                });
+                
+                // Visual feedback
+                const btn = newsletterForm.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = "Subscribed! 🎉";
+                btn.style.background = "var(--success)";
+                newsletterForm.reset();
+                setTimeout(() => { 
+                    btn.innerText = originalText; 
+                    btn.style.background = "";
+                }, 3000);
+            }
+        });
+    }
+
     // --- Form Tracking ---
     const leadForm = document.getElementById("lead-form");
     if (leadForm) {
