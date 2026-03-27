@@ -47,14 +47,19 @@
 
     <main>
         <section class="hero" id="home-banner">
-            <div class="container">
-                <h1>Elevate Your <span>Analytics Setup</span></h1>
-                <p>A controlled, premium environment engineered to test complex dataLayer architectures, event triggers, and engagement metrics perfectly.</p>
-                <div class="cta-group">
-                    <a href="#" class="btn btn-primary track-cta" data-cta-type="primary"
-                        data-cta-text="Deploy Tracker">Deploy Tracker</a>
-                    <a href="about.html" class="btn btn-secondary track-cta" data-cta-type="secondary"
-                        data-cta-text="Explore Features">Explore Features</a>
+            <div class="container" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h1>Elevate Your <span>Analytics Setup</span></h1>
+                    <p>A controlled, premium environment engineered to test complex dataLayer architectures, event triggers, and engagement metrics perfectly.</p>
+                    <div class="cta-group">
+                        <a href="#" class="btn btn-primary track-cta" data-cta-type="primary"
+                            data-cta-text="Deploy Tracker">Deploy Tracker</a>
+                        <a href="about.html" class="btn btn-secondary track-cta" data-cta-type="secondary"
+                            data-cta-text="Explore Features">Explore Features</a>
+                    </div>
+                </div>
+                <div class="hero-image" style="flex: 1; min-width: 300px;">
+                    <img src="images/analytics_dashboard.png" alt="Analytics Dashboard" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
                 </div>
             </div>
         </section>
@@ -141,6 +146,16 @@
                         type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+        </section>
+
+        <section class="tracking-image-section container" style="margin-bottom: 5rem; text-align: center;">
+            <div class="section-header">
+                <h2>Interactive Tracking Target</h2>
+                <p>Click the banner below to trigger a specialized GTM event.</p>
+            </div>
+            <div class="image-container" style="max-width: 600px; margin: 0 auto; cursor: pointer;">
+                <img src="images/gtm_tracking_banner.png" alt="Click to Track" id="gtm-track-img" class="track-img" data-img-type="banner" data-img-action="click" style="width: 100%; border-radius: 12px; transition: transform 0.3s ease;">
             </div>
         </section>
 
